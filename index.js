@@ -27,9 +27,17 @@ let db, auth;
 
 async function main() {
   // Add Firebase project configuration object here
-  const firebaseConfig = {};
+  const firebaseConfig = {
+    apiKey: "AIzaSyBS2T6-BAg7VNixUEZVcJWb3ScLgYz5nUU",
+    authDomain: "ibgroup-mainweb.firebaseapp.com",
+    projectId: "ibgroup-mainweb",
+    storageBucket: "ibgroup-mainweb.appspot.com",
+    messagingSenderId: "286801531372",
+    appId: "1:286801531372:web:64442dd8a080cf82a230c9",
+    measurementId: "G-4XB3J4BP82"
+  };
 
-  // initializeApp(firebaseConfig);
+  initializeApp(firebaseConfig);
 
   // FirebaseUI config
   const uiConfig = {
@@ -47,6 +55,6 @@ async function main() {
     },
   };
 
-  // const ui = new firebaseui.auth.AuthUI(auth);
+  const ui = new firebaseui.auth.AuthUI(auth);
 }
 main();
